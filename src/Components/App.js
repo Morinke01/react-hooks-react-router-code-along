@@ -1,5 +1,13 @@
-ReactDOM.render(
-    <BrowserRouter>
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Login from "./Login";
+import NavBar from "./Components/NavBar";
+
+function App() {
+  return (
+    <div>
       <NavBar />
       <Switch>
         <Route exact path="/about">
@@ -12,7 +20,8 @@ ReactDOM.render(
           <Home />
         </Route>
       </Switch>
-    </BrowserRouter>,
-    document.getElementById("root")
+    </div>
   );
-  
+}
+
+export default App;
